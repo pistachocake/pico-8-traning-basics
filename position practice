@@ -1,0 +1,34 @@
+function _init()
+	positionx=63
+	positiony=63
+	button=""
+end
+
+function	_update()
+	if	btn(➡️) then
+		button="right"
+		positionx=100
+		positiony=63
+	end
+	if btn(⬅️) then
+		button="left"
+		positionx=20
+		positiony=63
+	end
+	if btn(⬆️) then
+		button="up"
+		positiony=20
+		positionx=63
+	end
+	if btn(⬇️) then
+		button="down"
+		positiony=100
+		positionx=63
+	end
+end
+
+function _draw()
+	cls()
+	spr(1,positionx,positiony)
+	print(button)
+end
