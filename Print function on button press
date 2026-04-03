@@ -1,0 +1,33 @@
+--prints right,left,up and down depends on what button you press
+function _init()
+	button=""
+	count=0 
+	position=63
+end
+
+function _update()
+	if (btn(➡️)) then
+		button="right"
+		count+=1
+	end
+	if (btn(⬅️))then
+		button="left"
+		count+=1
+	end
+	if (btn(⬆️))then
+		button="up"
+		count+=1
+	end
+	if (btn(⬇️)) then
+		button="down"
+		count+=1
+	end
+end
+
+function _draw()
+	cls()
+	for i=0,count do
+	print(button)
+	end
+	
+end
